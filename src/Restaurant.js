@@ -16,7 +16,7 @@ export default function Restaurant() {
     useEffect(() => {
         setLoading(true);
 
-        fetch(`http://restaurant-api-wk.herokuapp.com/api/restaurants/${id}`)
+        fetch(`https://restaurant-api-wk.herokuapp.com/api/restaurants/${id}`)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error(
@@ -88,7 +88,6 @@ export default function Restaurant() {
             <Card className='mt-3'>
                 <Card.Header
                     style={{
-                        
                         color: 'white',
                         backgroundImage:
                             'linear-gradient(to right, #00afbc, #00efec',

@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,sBACI,cACJ","file":"main.c1873b55.chunk.css","sourcesContent":[".table-hover tr:hover {\n    cursor: pointer;\n}"]}

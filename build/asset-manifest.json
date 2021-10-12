@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.c1873b55.chunk.css",
+    "main.js": "/static/js/main.0ac1de89.chunk.js",
+    "main.js.map": "/static/js/main.0ac1de89.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.189cfbfd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.189cfbfd.js.map",
+    "static/css/2.081f420c.chunk.css": "/static/css/2.081f420c.chunk.css",
+    "static/js/2.d2b20648.chunk.js": "/static/js/2.d2b20648.chunk.js",
+    "static/js/2.d2b20648.chunk.js.map": "/static/js/2.d2b20648.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.081f420c.chunk.css.map": "/static/css/2.081f420c.chunk.css.map",
+    "static/css/main.c1873b55.chunk.css.map": "/static/css/main.c1873b55.chunk.css.map",
+    "static/js/2.d2b20648.chunk.js.LICENSE.txt": "/static/js/2.d2b20648.chunk.js.LICENSE.txt",
+    "static/media/WK-new-york-eats-bar.5ff61d0c.png": "/static/media/WK-new-york-eats-bar.5ff61d0c.png",
+    "static/media/WK-newyorkeats-01.0f9298ae.png": "/static/media/WK-newyorkeats-01.0f9298ae.png",
+    "static/media/loading-gear.bf338819.gif": "/static/media/loading-gear.bf338819.gif",
+    "static/media/thought-catalog-fnztlIb52gU-unsplash.a59b01b5.jpg": "/static/media/thought-catalog-fnztlIb52gU-unsplash.a59b01b5.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.189cfbfd.js",
+    "static/css/2.081f420c.chunk.css",
+    "static/js/2.d2b20648.chunk.js",
+    "static/css/main.c1873b55.chunk.css",
+    "static/js/main.0ac1de89.chunk.js"
+  ]
+}

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Card, Accordion, Badge } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 export default function About() {
     return (
@@ -17,10 +16,31 @@ export default function About() {
                     </Card.Header>
                     <Accordion.Collapse eventKey='0'>
                         <Card.Body>
-                            I love web development with JS stack, as well as
-                            C/C++ compiled language programming. There will be a
-                            lot more to come for my career as a programmer. Stay
-                            tuned!
+                            I love JS stack web development, Object-Oriented
+                            Programming and Linux embedded programming.
+                            Programming has become my part of every day life.
+                            <br />
+                            I'm not sure where my career will reside in the
+                            future yet. There will be a lot more to come for my
+                            career as a programmer. Stay tuned!
+                            <br />
+                            <br />
+                            <h5>Contact</h5>
+                            <h5>
+                                <a href='https://www.linkedin.com/in/wonkeun-no-09840520/'>
+                                    <Badge variant='primary'> LinkedIn</Badge>
+                                </a>
+                                {'  '}
+
+                                <a href='https://github.com/Genne23v/Airbnb_clone'>
+                                    <Badge variant='dark'>GitHub</Badge>
+                                </a>
+                                {'  '}
+
+                                <a href='mailto:wno@myseneca.ca'>
+                                    <Badge variant='danger'>Mail</Badge>
+                                </a>
+                            </h5>
                         </Card.Body>
                     </Accordion.Collapse>
                 </Card>
@@ -47,17 +67,17 @@ export default function About() {
                                     </Accordion.Toggle>
                                     <Accordion.Collapse eventKey='2'>
                                         <Card.Body>
-                                            Airbnb clone full stack website
+                                            Airbnb clone full-stack website
                                             using Node.js, MongoDB, Heroku. Used
                                             handlebars to template front-end and
-                                            a com bination of pure CSS and
+                                            a combination of pure CSS and
                                             Bootstrap. User input validation,
                                             user authentication, admin/user
                                             authorization, data object CRUD
                                             operations are implemented.
                                             <br />
                                             <a href='https://github.com/Genne23v/Airbnb_clone'>
-                                                GitHub Link
+                                                GitHub Repo
                                             </a>
                                         </Card.Body>
                                     </Accordion.Collapse>
@@ -75,12 +95,12 @@ export default function About() {
                                     <Accordion.Collapse eventKey='3'>
                                         <Card.Body>
                                             Travel front-end page inspired by
-                                            world travellers. Pure HTML & CSS
-                                            webpage using SmoothScroll and
+                                            world travellers. Pure HTML &amp;
+                                            CSS webpage using SmoothScroll and
                                             OwlCarousel libraries.
                                             <br />
                                             <a href='https://github.com/Genne23v/WK-Travel-Post'>
-                                                GitHub Link
+                                                GitHub Repo
                                             </a>
                                         </Card.Body>
                                     </Accordion.Collapse>
@@ -97,7 +117,7 @@ export default function About() {
                                             Scheduler app using React, Bootstrap
                                             and Tailwind CSS <br />
                                             <a href='https://github.com/Genne23v/react-scheduler'>
-                                                GitHub Link
+                                                GitHub Repo
                                             </a>
                                         </Card.Body>
                                     </Accordion.Collapse>

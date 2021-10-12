@@ -1,18 +1,17 @@
 import { useState, useEffect } from 'react';
 import { useLocation, useHistory } from 'react-router-dom';
 import queryString from 'query-string';
-import { Container,Card, Table, Pagination } from 'react-bootstrap';
+import { Container, Card, Table, Pagination } from 'react-bootstrap';
 import Loading from './components/Loading';
-import HeaderBg from './WK-new-york-eats-bar.png'
+import HeaderBg from './WK-new-york-eats-bar.png';
 
 export default function Restaurants() {
     const perPage = 10;
-    let url;
     let location = useLocation();
     let history = useHistory();
     const [page, setPage] = useState(1);
     const [restaurants, setRestaurants] = useState(null);
-    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     function previousPage() {
         if (page > 1) setPage(page - 1);
@@ -23,6 +22,7 @@ export default function Restaurants() {
     }
 
     useEffect(() => {
+        let url;
         let query = queryString.parse(location.search);
 
         if (query.borough) {
@@ -40,34 +40,50 @@ export default function Restaurants() {
             })
             .then((result) => {
                 setRestaurants(result);
-                setLoading(true);
-                console.log(result);    //TO BE REMOVED
             })
             .catch((err) => {
                 console.error(`Something is wrong while fetching data ${err}`);
+                setError(err);
             });
-    }, [location, page]);
+    }, [location, page, restaurants, error]);
 
-    // if (error){
-    //     return <Warning tryAgain={() => setRetries(retries +1)} />
-    // }
-
-    if (!loading) {
-        return <Loading />;
-    }
-
-    if (!restaurants) {
+    if (Array.isArray(restaurants) && !restaurants.length) {
         return (
-            <Card>
-                <Card.Title>No Restaurants Found</Card.Title>
+            <Card className='p-3'>
+                <Card.Title>
+                    No Restaurants Found for{' '}
+                    {queryString.parse(location.search).borough}
+                </Card.Title>
             </Card>
         );
     }
 
+    if (error) {
+        return (
+            <Card className='p-3'>
+                <Card.Title>Something is wrong while fetching data</Card.Title>
+                <Card.Text>{error.message}</Card.Text>
+            </Card>
+        );
+    }
+
+    if (!restaurants) {
+        return (
+            <>
+                <Loading desc={'Loading restaurants...'} />
+            </>
+        );
+    }
+
     return (
-        <Container className="mt-3">
+        <Container>
             <Card>
-                <Card.Body style={{ backgroundImage: `url(${HeaderBg})`, backgroundSize: 'cover', height: '115px'}}>
+                <Card.Body
+                    style={{
+                        backgroundImage: `url(${HeaderBg})`,
+                        backgroundSize: '100% 100%',
+                        backgroundRepeat: 'no-repeat',
+                    }}>
                     <Card.Title>Restaurants List</Card.Title>
                     <Card.Text>
                         Full list of restaurants. Optionally sorted by borough.
@@ -77,7 +93,11 @@ export default function Restaurants() {
 
             <Table className='mt-3' striped bordered hover>
                 <thead>
-                    <tr>
+                    <tr style={{
+                        color: '#333',
+                        backgroundImage:
+                            'linear-gradient(to right, #00afbc, #00efec',
+                    }}>
                         <th className='col-4'>Name</th>
                         <th className='col-3'>Address</th>
                         <th className='col-2'>Borough</th>
@@ -88,7 +108,7 @@ export default function Restaurants() {
                     {restaurants.map((restaurant) => {
                         return (
                             <tr
-                                horizontal
+                                key={restaurant._id}
                                 onClick={() =>
                                     history.push(
                                         `/restaurant/${restaurant._id}`

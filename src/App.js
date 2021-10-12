@@ -3,7 +3,7 @@ import Restaurants from './Restaurants';
 import Restaurant from './Restaurant';
 import About from './About';
 import NotFound from './NotFound';
-import NavBar from './NavBar';
+import NavBar from './components/NavBar';
 
 import { Col, Container, Row } from 'react-bootstrap';
 import { Redirect, Route, Switch } from 'react-router-dom';

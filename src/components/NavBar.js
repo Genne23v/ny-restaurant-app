@@ -16,7 +16,7 @@ export default function NavBar() {
 
     return (
         <>
-            <Navbar bg="dark" variant="dark" expand='lg'>
+            <Navbar bg="dark" variant="dark" expand='lg' className="mb-3">
                 <LinkContainer to='/'>
                     <Navbar.Brand>
                         <Image src={Logo} alt="brand-logo" height="55" className="mr-3" />

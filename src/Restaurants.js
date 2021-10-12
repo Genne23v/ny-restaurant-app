@@ -3,6 +3,7 @@ import { useLocation, useHistory } from 'react-router-dom';
 import queryString from 'query-string';
 import { Container,Card, Table, Pagination } from 'react-bootstrap';
 import Loading from './components/Loading';
+import HeaderBg from './WK-new-york-eats-bar.png'
 
 export default function Restaurants() {
     const perPage = 10;
@@ -64,9 +65,9 @@ export default function Restaurants() {
     }
 
     return (
-        <Container>
+        <Container className="mt-3">
             <Card>
-                <Card.Body>
+                <Card.Body style={{ backgroundImage: `url(${HeaderBg})`, backgroundSize: 'cover', height: '115px'}}>
                     <Card.Title>Restaurants List</Card.Title>
                     <Card.Text>
                         Full list of restaurants. Optionally sorted by borough.

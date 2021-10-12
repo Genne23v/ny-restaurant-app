@@ -1,7 +1,8 @@
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav, Form, FormControl, Button, Image } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import Logo from './WK-newyorkeats-01.png';
 
 export default function NavBar() {
     const [searchString, setSearchString] = useState('');
@@ -15,9 +16,12 @@ export default function NavBar() {
 
     return (
         <>
-            <Navbar bg='light' expand='lg'>
+            <Navbar bg="dark" variant="dark" expand='lg'>
                 <LinkContainer to='/'>
-                    <Navbar.Brand>New York Restaurants</Navbar.Brand>
+                    <Navbar.Brand>
+                        <Image src={Logo} alt="brand-logo" height="55" className="mr-3" />
+
+                        New York Restaurants</Navbar.Brand>
                 </LinkContainer>
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav'>
@@ -37,7 +41,7 @@ export default function NavBar() {
                             value={searchString}
                             onChange={(e) => setSearchString(e.target.value)}
                         />
-                        <Button type='submit' variant='outline-success'>
+                        <Button type='submit' variant='outline-info'>
                             Search
                         </Button>
                     </Form>

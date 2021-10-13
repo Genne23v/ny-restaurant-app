@@ -1,4 +1,3 @@
-import React from 'react';
 import { Card, Accordion, Badge } from 'react-bootstrap';
 
 export default function About() {

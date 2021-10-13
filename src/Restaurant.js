@@ -40,7 +40,7 @@ export default function Restaurant() {
             });
     }, [id, location]);
 
-    if (!restaurant) {
+    if (!(loading && restaurant)) {
         return (
             <Card className='p-3'>
                 <Card.Title>Unable to find restaurant with id: {id}</Card.Title>

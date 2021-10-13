@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Card, Image } from 'react-bootstrap';
-import emptyPlate from './thought-catalog-fnztlIb52gU-unsplash.jpg';
+import emptyPlate from './not-found.jpg';
 
 export default function NotFound() {
     return (

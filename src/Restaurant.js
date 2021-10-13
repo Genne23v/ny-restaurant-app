@@ -16,7 +16,7 @@ export default function Restaurant() {
     useEffect(() => {
         setLoading(true);
 
-        fetch(`http://restaurant-api-wk.herokuapp.com/api/restaurants/${id}`)
+        fetch(`https://restaurant-api-wk.herokuapp.com/api/restaurants/${id}`)
             .then((res) => {
                 if (!res.ok) {
                     throw new Error(

@@ -18,6 +18,7 @@ export default function Restaurant() {
 
         fetch(`https://restaurant-api-wk.herokuapp.com/api/restaurants/${id}`)
             .then((res) => {
+                console.log(`res: ${res}`)
                 if (!res.ok) {
                     throw new Error(
                         'Could not fetch the requested restaurant info'

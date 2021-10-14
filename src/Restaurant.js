@@ -18,7 +18,6 @@ export default function Restaurant() {
 
         fetch(`https://restaurant-api-wk.herokuapp.com/api/restaurants/${id}`)
             .then((res) => {
-                console.log(`res: ${Object.keys(res)}`);
                 if (!res.ok) {
                     throw new Error(
                         'Could not fetch the requested restaurant info'
@@ -32,16 +31,16 @@ export default function Restaurant() {
                 } else {
                     setRestaurant(null);
                 }
-                setLoading(false);
             })
             .catch((err) => {
                 console.error(
                     `Something is wrong while fetching restaurant info - ${err}`
                 );
-            });
+            })
+            .finally(() => setLoading(false))
     }, [id, location]);
 
-    if (!(loading && restaurant)) {
+    if (!loading && !restaurant) {
         return (
             <Card className='p-3'>
                 <Card.Title>Unable to find restaurant with id: {id}</Card.Title>

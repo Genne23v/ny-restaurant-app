@@ -18,7 +18,7 @@ export default function Restaurant() {
 
         fetch(`https://restaurant-api-wk.herokuapp.com/api/restaurants/${id}`)
             .then((res) => {
-                console.log(`res: ${res}`)
+                console.log(`res: ${Object.keys(res)}`);
                 if (!res.ok) {
                     throw new Error(
                         'Could not fetch the requested restaurant info'
@@ -89,7 +89,6 @@ export default function Restaurant() {
             <Card className='mt-3'>
                 <Card.Header
                     style={{
-                        
                         color: 'white',
                         backgroundImage:
                             'linear-gradient(to right, #00afbc, #00efec',

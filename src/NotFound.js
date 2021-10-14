@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Card, Image } from 'react-bootstrap';
-import emptyPlate from './not-found.jpg';
+import emptyPlate from './not-found.webp';
 
 export default function NotFound() {
     return (
